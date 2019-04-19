@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		831FBD9D22693FFD00546A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FBD9C22693FFD00546A0A /* AppDelegate.swift */; };
-		831FBD9F22693FFD00546A0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FBD9E22693FFD00546A0A /* ViewController.swift */; };
+		831FBD9F22693FFD00546A0A /* BreachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FBD9E22693FFD00546A0A /* BreachViewController.swift */; };
 		831FBDA222693FFD00546A0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831FBDA022693FFD00546A0A /* Main.storyboard */; };
 		831FBDA422693FFE00546A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831FBDA322693FFE00546A0A /* Assets.xcassets */; };
 		831FBDA722693FFE00546A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831FBDA522693FFE00546A0A /* LaunchScreen.storyboard */; };
 		831FBDB222693FFE00546A0A /* BreachesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FBDB122693FFE00546A0A /* BreachesTests.swift */; };
+		831FBDBD2269402500546A0A /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FBDBC2269402500546A0A /* Breach.swift */; };
+		831FBDBF2269404C00546A0A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FBDBE2269404C00546A0A /* ApiManager.swift */; };
+		831FBDC12269405D00546A0A /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FBDC02269405D00546A0A /* HttpManager.swift */; };
+		831FBDC32269415300546A0A /* BreachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FBDC22269415300546A0A /* BreachViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,7 @@
 /* Begin PBXFileReference section */
 		831FBD9922693FFD00546A0A /* Breaches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breaches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831FBD9C22693FFD00546A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		831FBD9E22693FFD00546A0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		831FBD9E22693FFD00546A0A /* BreachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachViewController.swift; sourceTree = "<group>"; };
 		831FBDA122693FFD00546A0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831FBDA322693FFE00546A0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		831FBDA622693FFE00546A0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,11 @@
 		831FBDAD22693FFE00546A0A /* BreachesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreachesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		831FBDB122693FFE00546A0A /* BreachesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachesTests.swift; sourceTree = "<group>"; };
 		831FBDB322693FFE00546A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831FBDBC2269402500546A0A /* Breach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
+		831FBDBE2269404C00546A0A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		831FBDC02269405D00546A0A /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
+		831FBDC22269415300546A0A /* BreachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachViewModel.swift; sourceTree = "<group>"; };
+		831FBDC82269589300546A0A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,7 @@
 		831FBD9022693FFD00546A0A = {
 			isa = PBXGroup;
 			children = (
+				831FBDC82269589300546A0A /* README.md */,
 				831FBD9B22693FFD00546A0A /* Breaches */,
 				831FBDB022693FFE00546A0A /* BreachesTests */,
 				831FBD9A22693FFD00546A0A /* Products */,
@@ -77,12 +87,11 @@
 		831FBD9B22693FFD00546A0A /* Breaches */ = {
 			isa = PBXGroup;
 			children = (
-				831FBD9C22693FFD00546A0A /* AppDelegate.swift */,
-				831FBD9E22693FFD00546A0A /* ViewController.swift */,
-				831FBDA022693FFD00546A0A /* Main.storyboard */,
-				831FBDA322693FFE00546A0A /* Assets.xcassets */,
-				831FBDA522693FFE00546A0A /* LaunchScreen.storyboard */,
-				831FBDA822693FFE00546A0A /* Info.plist */,
+				831FBDC9226958D900546A0A /* View */,
+				831FBDCA226958F100546A0A /* View Model */,
+				831FBDCC2269591800546A0A /* Model */,
+				831FBDCB2269590A00546A0A /* Services */,
+				831FBDCD2269596000546A0A /* Support files */,
 			);
 			path = Breaches;
 			sourceTree = "<group>";
@@ -94,6 +103,51 @@
 				831FBDB322693FFE00546A0A /* Info.plist */,
 			);
 			path = BreachesTests;
+			sourceTree = "<group>";
+		};
+		831FBDC9226958D900546A0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				831FBD9E22693FFD00546A0A /* BreachViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		831FBDCA226958F100546A0A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				831FBDC22269415300546A0A /* BreachViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		831FBDCB2269590A00546A0A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				831FBDBE2269404C00546A0A /* ApiManager.swift */,
+				831FBDC02269405D00546A0A /* HttpManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		831FBDCC2269591800546A0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				831FBDBC2269402500546A0A /* Breach.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		831FBDCD2269596000546A0A /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				831FBD9C22693FFD00546A0A /* AppDelegate.swift */,
+				831FBDA022693FFD00546A0A /* Main.storyboard */,
+				831FBDA522693FFE00546A0A /* LaunchScreen.storyboard */,
+				831FBDA822693FFE00546A0A /* Info.plist */,
+				831FBDA322693FFE00546A0A /* Assets.xcassets */,
+			);
+			name = "Support files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				831FBD9F22693FFD00546A0A /* ViewController.swift in Sources */,
+				831FBDBF2269404C00546A0A /* ApiManager.swift in Sources */,
+				831FBDC32269415300546A0A /* BreachViewModel.swift in Sources */,
+				831FBDC12269405D00546A0A /* HttpManager.swift in Sources */,
+				831FBDBD2269402500546A0A /* Breach.swift in Sources */,
+				831FBD9F22693FFD00546A0A /* BreachViewController.swift in Sources */,
 				831FBD9D22693FFD00546A0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
